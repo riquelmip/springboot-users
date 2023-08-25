@@ -1,17 +1,16 @@
 package com.users.users.models;
 
-
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
-
 @Entity
 @Table(name = "users")
 @ToString @EqualsAndHashCode
 public class User {
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Getter @Setter @Column(name = "id")
