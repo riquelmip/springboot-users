@@ -3,9 +3,7 @@ package com.users.users.controllers;
 import com.users.users.dao.UserDao;
 import com.users.users.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +14,7 @@ public class UserController {
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping(value = "users")
+    @RequestMapping(value = "api/users", method = RequestMethod.GET)
     public List<User> getUsers(){
        return userDao.getUsers();
     }
