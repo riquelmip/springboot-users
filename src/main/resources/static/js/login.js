@@ -28,7 +28,7 @@ async function login(){
        if (respuesta != 'FAIL') {
          localStorage.token = respuesta;
          localStorage.email = datos.email;
-         window.location.href = 'users.html'
+         window.location.href = 'users.html';
        } else {
          alert("Las credenciales son incorrectas. Por favor intente nuevamente.");
        }
